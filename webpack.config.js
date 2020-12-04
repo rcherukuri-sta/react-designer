@@ -6,15 +6,11 @@ module.exports = {
     extensions: ['.js', '.jsx', '.js', '.css'],
   },
   devtool: 'eval',
-  entry: [
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
-    './examples'
-  ],
+  entry: "./src/index.js",
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/dist/'
+    path: path.resolve("build"),
+    filename: "index.js",
+    libraryTarget: "commonjs2"
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()

@@ -7,13 +7,11 @@ module.exports = {
     extensions: ['', '.js', '.jsx', '.js', '.css'],
     packageMains: ['webpack', 'browser', 'web', 'browserify', ['jam', 'main'], 'main', 'index']
   },
-  entry: [
-    './examples'
-  ],
+  entry: "./src/index.js",
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/static/'
+    path: path.resolve("build"),
+    filename: "index.js",
+    libraryTarget: "commonjs2"
   },
   plugins: [],
   module: {
